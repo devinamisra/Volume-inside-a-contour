@@ -32,17 +32,8 @@ def potential(x, y, z):
 		) / 2
 	return phi
 
-def potential_1(x, y, z):
-	omega2 = G * (m1 + m2) / a ** 3
-	r12 = x ** 2 + y ** 2 + z ** 2
-	r22 = (x - a) ** 2 + y ** 2 + z ** 2
-	phi_1 = 2 / ((1 + q) * r12) + (2 * q) / ((1 + q) * r22) + (x - (q / (1 + q))) ** 2 + y ** 2
-	return phi_1
-
-
 x = np.linspace(-8, 12, 1e3) * 6.96 * 10 ** 10#-78
 y = np.linspace(-8, 10, 1e3) * 6.96 * 10 ** 10#-77
-z = np.linspace(-8, 10, 1e3) * 6.96 * 10 ** 10#-77
 
 x_grid, y_grid = np.meshgrid(x, y)
 
